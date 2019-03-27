@@ -18,8 +18,7 @@ defmodule PoeApi.Router do
       if opts[:auth] != false do
         plug PoeApi.Plug.Authenticate
       end
-      plug Plug.Parsers, parsers: [Plug.Parsers.Wait1,
-                                   Plug.Parsers.JSON,
+      plug Plug.Parsers, parsers: [Plug.Parsers.JSON,
                                    Plug.Parsers.URLENCODED],
                          json_decoder: Poison
     end
