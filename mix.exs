@@ -25,9 +25,10 @@ defmodule PoeApi.Mixfile do
      {:concerto_plug, "~> 0.1.3"},
      {:cowboy, "~> 2.5.0"},
      {:fugue, "~> 0.1.6"},
-     {:mazurka, github: "simplecastapps/mazurka"},
+     {:mazurka, github: "simplecastapps/mazurka", override: true},
      {:mazurka_plug, github: "simplecastapps/mazurka_plug"},
-     {:plug, "~> 1.3.0"},
+     {:plug, "~> 1.7.0"},
+     {:plug_cowboy, "~> 2.0"},
      {:plug_x_forwarded_proto, "~> 0.1.0"},
      {:poison, "3.1.0"},
      {:simple_secrets, "~> 1.0.0"},]
