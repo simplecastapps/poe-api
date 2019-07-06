@@ -1,7 +1,7 @@
 defmodule PoeApi.Router do
   defmacro __using__(opts) do
     resource = format_resource(__CALLER__.module)
-    quote bind_quoted: binding do
+    quote bind_quoted: binding() do
       use Concerto, [root: "#{File.cwd!}/web",
                      ext: ".ex",
                      module_prefix: resource]
