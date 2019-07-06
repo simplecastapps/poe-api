@@ -2,7 +2,7 @@ defmodule PoeApi.Router do
   defmacro __using__(opts) do
     resource = format_resource(__CALLER__.module)
     quote bind_quoted: binding do
-      use Concerto, [root: "#{System.cwd!}/web",
+      use Concerto, [root: "#{File.cwd!}/web",
                      ext: ".ex",
                      module_prefix: resource]
       use Concerto.Plug.Mazurka
